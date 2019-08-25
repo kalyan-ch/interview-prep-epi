@@ -1,7 +1,6 @@
 package org.wb.Chap5Arrays;
 
-import static org.wb.Chap5Arrays.ArraysUtils.printArray;
-import static org.wb.Chap5Arrays.ArraysUtils.swap;
+import static org.wb.Chap5Arrays.ArraysUtils.printIntArray;
 
 public class FiveFIveDeleteDupsSortedArr {
 
@@ -13,8 +12,8 @@ public class FiveFIveDeleteDupsSortedArr {
         //deleteDupsFromSortedArr(arr);
         deleteDupsFromSortedArr(arr3);
         deleteKeyFromArr(arr4, 2);
-        printArray(arr3);
-        printArray(arr4);
+        printIntArray(arr3);
+        printIntArray(arr4);
     }
 
     private static void deleteDupsFromSortedArr(int[] arr) {

@@ -12,9 +12,9 @@ public class FiveOneDutchFlag {
         dutchNationalFlag(arr);
         dutchNationalFlagNoOrder(arr2);
         dutchNationalFlag(arr1);
-        printArray(arr);
-        printArray(arr1);
-        printArray(arr2);
+        printIntArray(arr);
+        printIntArray(arr1);
+        printIntArray(arr2);
 
     }
 

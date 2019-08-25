@@ -4,11 +4,27 @@ import java.util.List;
 
 public class ArraysUtils {
 
-    public static void printArray(int[] array){
+    public static void printIntArray(int[] array){
         for(int a: array){
             System.out.print(a+" ");
         }
         System.out.println();
+    }
+
+    public static void printCharArray(char[] array){
+        for(char a: array){
+            System.out.print(a+" ");
+        }
+        System.out.println();
+    }
+
+    public static void print2dArray(int[][] array){
+        for(int[] arr: array){
+            for(int a: arr)
+                System.out.print(a+" ");
+
+            System.out.println();
+        }
     }
 
     public static void printList(List<Integer> array){
