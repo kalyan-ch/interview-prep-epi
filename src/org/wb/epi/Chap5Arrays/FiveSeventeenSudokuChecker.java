@@ -1,4 +1,4 @@
-package org.wb.Chap5Arrays;
+package org.wb.epi.Chap5Arrays;
 
 import java.util.HashMap;
 import java.util.Map;

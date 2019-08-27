@@ -1,4 +1,4 @@
-package org.wb.Chap5Arrays;
+package org.wb.epi.Chap5Arrays;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,9 +9,9 @@ public class FiveNineAllPrimesBeforeN {
     //get all prime numbers between 1 and N
 
     public static void main(String[] args) {
-        ArraysUtils.printList(getAllPrimesBefore(250));
-        ArraysUtils.printList(getAllPrimesBefore(2000));
-        ArraysUtils.printList(getAllPrimesBefore(10));
+        ArraysUtils.printIntList(getAllPrimesBefore(250));
+        ArraysUtils.printIntList(getAllPrimesBefore(2000));
+        ArraysUtils.printIntList(getAllPrimesBefore(10));
     }
 
     //sieve of eratosthenes

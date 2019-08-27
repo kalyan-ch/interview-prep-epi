@@ -1,6 +1,6 @@
-package org.wb.Chap5Arrays;
+package org.wb.epi.Chap5Arrays;
 
-import static org.wb.Chap5Arrays.ArraysUtils.*;
+import static org.wb.epi.Chap5Arrays.ArraysUtils.*;
 
 public class FiveOneDutchFlag {
 

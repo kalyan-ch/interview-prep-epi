@@ -1,4 +1,4 @@
-package org.wb.Chap4PrimitiveTypes;
+package org.wb.epi.Chap4PrimitiveTypes;
 
 public class FourOneParity {
     // parity - number of 1s in a bit - parity is 1 number of 1s is odd 0 otherwise

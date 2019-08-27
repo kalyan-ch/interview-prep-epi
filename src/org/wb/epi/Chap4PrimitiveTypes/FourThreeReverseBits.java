@@ -1,4 +1,4 @@
-package org.wb.Chap4PrimitiveTypes;
+package org.wb.epi.Chap4PrimitiveTypes;
 
 public class FourThreeReverseBits {
     // reverse the bits of a 64 bit number

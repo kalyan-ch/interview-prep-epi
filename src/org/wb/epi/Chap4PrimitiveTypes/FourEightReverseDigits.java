@@ -1,4 +1,4 @@
-package org.wb.Chap4PrimitiveTypes;
+package org.wb.epi.Chap4PrimitiveTypes;
 
 public class FourEightReverseDigits {
     // reverse an integer

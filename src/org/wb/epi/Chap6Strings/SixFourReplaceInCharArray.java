@@ -1,9 +1,7 @@
-package org.wb.Chap6Strings;
+package org.wb.epi.Chap6Strings;
 
-import org.wb.Chap5Arrays.ArraysUtils;
-
-import static org.wb.Chap5Arrays.ArraysUtils.printCharArray;
-import static org.wb.Chap5Arrays.ArraysUtils.printIntArray;
+import static org.wb.epi.Chap5Arrays.ArraysUtils.printCharArray;
+import static org.wb.epi.Chap5Arrays.ArraysUtils.printIntArray;
 
 public class SixFourReplaceInCharArray {
 

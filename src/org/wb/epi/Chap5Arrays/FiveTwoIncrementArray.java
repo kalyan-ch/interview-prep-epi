@@ -1,10 +1,10 @@
-package org.wb.Chap5Arrays;
+package org.wb.epi.Chap5Arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.wb.Chap5Arrays.ArraysUtils.printList;
+import static org.wb.epi.Chap5Arrays.ArraysUtils.printIntList;
 
 public class FiveTwoIncrementArray {
 
@@ -15,8 +15,8 @@ public class FiveTwoIncrementArray {
         List<Integer> result = addTwoListNumbers(number1, number2);
         addOneToList(number1);
 
-        printList(number1);
-        printList(result);
+        printIntList(number1);
+        printIntList(result);
 
     }
 

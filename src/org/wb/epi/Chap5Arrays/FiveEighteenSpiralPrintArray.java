@@ -1,4 +1,4 @@
-package org.wb.Chap5Arrays;
+package org.wb.epi.Chap5Arrays;
 
 public class FiveEighteenSpiralPrintArray {
 

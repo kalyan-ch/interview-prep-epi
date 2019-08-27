@@ -1,4 +1,4 @@
-package org.wb.Chap5Arrays;
+package org.wb.epi.Chap5Arrays;
 
 import java.util.List;
 
@@ -27,8 +27,15 @@ public class ArraysUtils {
         }
     }
 
-    public static void printList(List<Integer> array){
+    public static void printIntList(List<Integer> array){
         for(Integer a: array){
+            System.out.print(a+" ");
+        }
+        System.out.println();
+    }
+
+    public static void printStrList(List<String> array){
+        for(String a: array){
             System.out.print(a+" ");
         }
         System.out.println();

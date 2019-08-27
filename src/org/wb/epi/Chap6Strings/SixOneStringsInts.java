@@ -1,4 +1,4 @@
-package org.wb.Chap6Strings;
+package org.wb.epi.Chap6Strings;
 
 public class SixOneStringsInts {
 
