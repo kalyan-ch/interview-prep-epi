@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Problem3 {
 
+    //What is the largest prime factor of a number ?
     public static void main(String[] args) {
         System.out.println(largestPrimeFactor(13195));
         System.out.println(largestPrimeFactor(600851475143L));
