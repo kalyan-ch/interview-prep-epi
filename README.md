@@ -26,3 +26,13 @@ Preparation for interviews - 1 month course from elements of programming intervi
 1. Similar to arrays, linked list problems also have trivial solutions involving O(n) space.
 2. Consider using two iterators; many problems benefit from this
 3. Arrays.asList() can be used to replace simple classes -> `Point` class vs `Arrays.asList(x,y)`
+
+### Stacks and Queues
+1. FIFO is ideal when order needs to be preserved
+2. LIFO is ideal when parsing is involved
+
+### Binary Trees
+1. Recursive algorithms are well suited for problems on trees. Therefore, the space complexity might increase because of the function call stack
+2. Consider left and right skewed trees for complexity analysis
+3. If a parent node exists we can use it to reduce time and space complexity
+ 
