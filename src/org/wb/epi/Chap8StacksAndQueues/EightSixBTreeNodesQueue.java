@@ -9,13 +9,13 @@ public class EightSixBTreeNodesQueue {
 
     //breadth first search of a binary tree
     public static void main(String[] args) {
-        TreeNode<Integer> root = new TreeNode<>(20, null, null);
-        TreeNode<Integer> lvl2Node1 = insertTreeNode(true, 10, root);
-        TreeNode<Integer> lvl2Node2 = insertTreeNode(false, 1, root);
-        TreeNode<Integer> lvl3Node1 = insertTreeNode(true, 25, lvl2Node1);
-        TreeNode<Integer> lvl3Node2 = insertTreeNode(false, 26, lvl2Node1);
-        TreeNode<Integer> lvl3Node3 = insertTreeNode(true, 32, lvl2Node2);
-        TreeNode<Integer> lvl3Node4 = insertTreeNode(false, 37, lvl2Node2);
+        TreeNode root = new TreeNode(20, null, null);
+        TreeNode lvl2Node1 = insertTreeNode(true, 10, root);
+        TreeNode lvl2Node2 = insertTreeNode(false, 1, root);
+        TreeNode lvl3Node1 = insertTreeNode(true, 25, lvl2Node1);
+        TreeNode lvl3Node2 = insertTreeNode(false, 26, lvl2Node1);
+        TreeNode lvl3Node3 = insertTreeNode(true, 32, lvl2Node2);
+        TreeNode lvl3Node4 = insertTreeNode(false, 37, lvl2Node2);
         insertTreeNode(true, 5, lvl3Node1);
         insertTreeNode(false, 6, lvl3Node2);
         insertTreeNode(false, 8, lvl3Node3);
@@ -26,14 +26,14 @@ public class EightSixBTreeNodesQueue {
 
     }
 
-    private static void breadthFirstSearchPrintTree(TreeNode<Integer> root) {
+    private static void breadthFirstSearchPrintTree(TreeNode root) {
 
-        Queue<TreeNode<Integer>> currNodes = new ArrayDeque<>();
+        Queue<TreeNode> currNodes = new ArrayDeque<>();
         currNodes.add(root);
         while(!currNodes.isEmpty()){
-            Queue<TreeNode<Integer>> nextNodes = new ArrayDeque<>();
+            Queue<TreeNode> nextNodes = new ArrayDeque<>();
             while(!currNodes.isEmpty()){
-                TreeNode<Integer> currNode = currNodes.poll();
+                TreeNode currNode = currNodes.poll();
                 if(currNode != null){
                     System.out.print(currNode.data+" ");
                     if(currNode.left != null)
@@ -51,8 +51,8 @@ public class EightSixBTreeNodesQueue {
 
     }
 
-    private static TreeNode<Integer> insertTreeNode(boolean isLeft, int data, TreeNode<Integer> root) {
-        TreeNode<Integer> node = new TreeNode<>(data, null, null);
+    private static TreeNode insertTreeNode(boolean isLeft, int data, TreeNode root) {
+        TreeNode node = new TreeNode(data, null, null);
         if(isLeft){
             root.left = node;
         }else{

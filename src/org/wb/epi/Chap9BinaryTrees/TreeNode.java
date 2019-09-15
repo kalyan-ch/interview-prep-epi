@@ -1,11 +1,11 @@
 package org.wb.epi.Chap9BinaryTrees;
 
-public class TreeNode<T> {
+public class TreeNode {
     public TreeNode left;
-    public T data;
+    public Integer data;
     public TreeNode right;
 
-    public TreeNode(T data, TreeNode left, TreeNode right){
+    public TreeNode(Integer data, TreeNode left, TreeNode right){
         this.data = data;
         this.left = left;
         this.right = right;
