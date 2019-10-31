@@ -9,13 +9,13 @@ public class FourThreeReverseBits {
     }
 
     //swap bits iteratively from left to right
-    private static long reverseBits1(long l) {
+    private static long reverseBits1(long num) {
         long result = 0;
         int i = 0, j = 63;
         while(j > i){
-            if(((l >>> i) & 1) != ((l >>> j) & 1)){
+            if(((num >>> i) & 1) != ((num >>> j) & 1)){
                 long bitMask = (1L << i) | (1L << j);
-                result = l ^ bitMask;
+                result = num ^ bitMask;
             }
             i++;
             j--;

@@ -18,9 +18,8 @@ public class FourSevenXPowerY {
         }
 
         while(y > 0){
-            if((y&1) != 0){
+            if((y&1) != 0)
                 result *= x;
-            }
             x *= x;
             y >>>= 1;
         }
