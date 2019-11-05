@@ -9,15 +9,18 @@ import static org.wb.epi.Chap5Arrays.ArraysUtils.printIntList;
 public class FiveTwoIncrementArray {
 
     public static void main(String[] args) {
-        List<Integer> number1 = Arrays.asList(4,5,5);
+        List<Integer> number1 = new ArrayList<>();
+        number1.add(9);
+        number1.add(7);
+        number1.add(4);
+
         List<Integer> number2 = Arrays.asList(9,9,2,5);
 
-        List<Integer> result = addTwoListNumbers(number1, number2);
         addOneToList(number1);
-
         printIntList(number1);
-        printIntList(result);
 
+        List<Integer> result = addTwoListNumbers(number1, number2);
+        printIntList(result);
     }
 
     private static void addOneToList(List<Integer> number) {

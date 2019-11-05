@@ -4,24 +4,26 @@ import static org.wb.epi.Chap5Arrays.ArraysUtils.printIntArray;
 
 public class FiveFIveDeleteDupsSortedArr {
 
+    //delete duplicates from a sorted array
+
     public static void main(String[] args) {
-        int[] arr = {2,2,4,5,6,7,7,8};
+        int[] arr = {2, 3, 4, 5, 6, 7, 7, 8};
         int[] arr2 = {2, 3, 5, 5, 7, 11, 11, 11, 13};
         int[] arr3 = {2, 2, 3, 3, 5};
         int[] arr4 = {2, 4, 3, 2, 1};
-        //deleteDupsFromSortedArr(arr);
+        deleteDupsFromSortedArr(arr);
         deleteDupsFromSortedArr(arr3);
-        deleteKeyFromArr(arr4, 2);
-        printIntArray(arr3);
+        deleteKeyFromArr(arr2, 2);
+        printIntArray(arr);
         printIntArray(arr4);
     }
 
     private static void deleteDupsFromSortedArr(int[] arr) {
-        int i = 0, j = 1;
-        // j acts as a index for subarray that contains unique elements
+        int i = 0, j = 0;
+        // j is an end-index for sub-array that contains unique elements
         while( i < arr.length){
-            if(arr[i] != arr[j-1]){
-                arr[j++] = arr[i];
+            if(arr[i] != arr[j]){
+                arr[++j] = arr[i];
             }
             i++;
         }
@@ -29,7 +31,7 @@ public class FiveFIveDeleteDupsSortedArr {
 
     private static void deleteKeyFromArr(int[] arr, int key){
         int i = 0, j = 0;
-        // j acts as a index for subarray that contains all elements that are not key
+        // j is end-index for sub-array that contains all elements that are not key
         while( i < arr.length){
             if(arr[i] != key){
                 arr[j++] = arr[i];
