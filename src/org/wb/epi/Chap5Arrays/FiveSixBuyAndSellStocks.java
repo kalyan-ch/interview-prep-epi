@@ -27,16 +27,14 @@ public class FiveSixBuyAndSellStocks {
     //variant 1
     //find the length of longest subarray in which all elements are equal
     private static int lengthOfLongestEqualSubArr(int[] arr) {
-        int maxLength = 0, runningCounter = 0, runningElement = 0;
-        for(int i = 0; i < arr.length; i++){
-            if(runningElement != arr[i]){
-                runningElement = arr[i];
+        int maxLength = 0, runningCounter = 1;
+        for(int i = 0; i < arr.length - 1 ; i++){
+            if(arr[i] != arr[i+1]){
                 maxLength = Math.max(maxLength, runningCounter);
-                runningCounter = 0;
+                runningCounter = 1;
             }
             runningCounter++;
         }
-
         return maxLength;
     }
 
