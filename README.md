@@ -15,13 +15,17 @@ Preparation for interviews - 1 month course from elements of programming intervi
 8. find `x % (power of 2)` : x & (twoPow - 1)
 
 ### Arrays and Strings
+#### Arrays
 1. Simple brute force solutions in arrays involve additional space complexity of O(n). To use the array itself would be subtler and use O(1) space.
 2. Filling an array from front is slow, so should see if it is possible to do this from the back.
 3. instead of deleting an entry consider overwriting it since deletion involves shifting all the other elements.
-4. Be comfortable dealing with sub-arrays.
+4. Be comfortable dealing with sub-arrays - use different indexes for indicating start or end of each sub-arrays
 5. Don't worry about the integrity of the array until it is time return it.
+
+#### Strings
 6. Strings are immutable but character arrays and `StringBuilder` aren't.
 7. To check if a string is a palindrome just compare the first and last character of the string until you reach the middle
+8. Use Stringbuilder to construct Strings instead of appending characters to a String.
 
 ### Linked Lists
 1. Similar to arrays, linked list problems also have trivial solutions involving O(n) space.
