@@ -41,3 +41,55 @@ Preparation for interviews - 1 month course from elements of programming intervi
 2. Consider left and right skewed trees for complexity analysis
 3. If a parent node exists we can use it to reduce time and space complexity
  
+### System Design
+
+#### Key characteristics of distributed systems
+
+##### Scalability 
+
+Scalability is the capability of a system to grow and manage increased demand - increased data volume, increased amount of work etc., without losing any performance.
+
+Horizontal scaling is scaling by adding more machines to the existing pool. It is easier to scale dynamically this way than vertically. MongoDb and Cassandra use horizontal scaling
+
+Vertical scaling is scaling by adding more power (RAM, Processor etc.) to the existing pool of machines. This type of scaling is limited by individual machine capacity. Good example is MySQL.
+
+##### Reliability
+
+Reliability is the probability a system might fail in a given period. A distribute system is reliable if it continues to deliver the services even if one of more software or hardware components fail. Achieving this might lead to redundancy. 
+
+##### Availability
+
+Availability is the time a system remains operational to perform its function in a given period. Usually measured in percentages. 
+
+Reliability vs Availability - if a system is reliable it is available. However, if it is available, it is not necessarily reliable. 
+
+
+##### Efficiency
+
+Efficiency is the performance of a given service or system. 
+
+##### Manageability or Servicability
+
+This is the simplicity with which a system can be repaired or manitained. If this process is too complex or time taking, the availability of the system decreases. 
+
+Ease of diagnosing, ease of making updates and ease of operation also factor into defining the Manageability of a system. 
+
+
+#### Load Balancing
+
+Load balancer spreads the traffic across the cluster of servers to improve availability and performance of a system. It avoids any server to be a single 
+point of failure and keeps availability high by spreading the traffic.
+
+It should ideally keep track of all the servers and stop sending traffic to any servers that are down for whatever reason.
+
+We can add a load balancer at each layer of the system to ulitize full scalability: between clients and web servers, between web servers and app servers, between app servers and database etc.
+
+Load balancing algorithms chose a backend server by consiering if the server is healthy. If there are many servers that are healthy one is chosen using:
+
+1. Least Connection Method - server with fewest active connections.
+2. Least Responsive Time Method - server with fewest active connections and least average response time. 
+3. Least Bandwidth Method - server with least amount of traffic measured in Mbps
+4. Round Robin Method - cycle through list of servers and issue request to the next server. starts from beginning if it reaches the end. 
+5. Weighted Round Robin Method - same as the above but each server is assigned a weight based on processing capacity and the LB selects next heaviest server
+6. IP Hash - a hash of IP addresses of servers is maintained and request is redirected to one of them.
+
