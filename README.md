@@ -93,3 +93,51 @@ Load balancing algorithms chose a backend server by consiering if the server is 
 5. Weighted Round Robin Method - same as the above but each server is assigned a weight based on processing capacity and the LB selects next heaviest server
 6. IP Hash - a hash of IP addresses of servers is maintained and request is redirected to one of them.
 
+#### Caching
+
+Caching enables for vastly better use of resources we already have. Caches take advantage of locality of reference principle: recently requested resource is likely to be requested again. Caching can be used between every layer but often used near to the front-end layer.
+
+Application Server Cache - a response data is stored in the cache and when the request is received the node checks the cache and returns it if found or it fetches the data from the service. 
+
+Content Distribution Network (CDN) - CDN serves large amounts of static media. CDN will serve the file if it is in cache or it will fetch the file from back-end service. Only used for large systems.
+
+Cache invalidation - cache requires invalidation for removing wrong or old data. Following are the algorithms for effective cache invalidation:
+
+1. Write-through cache - write data to cache and database at the same time. This has higher latency since write operation is performed more than once. 
+2. Write-around cache - write data to database directly bypassing cache. This method will require the cache to get data from database later and will cause "cache-miss"
+3. Write-back cache - write data to cache only. perform database persistance from cache at regular intervals. This is efficient but there is a risk of data loss in the event of a crash or power failure. 
+
+Cache Evicition policies:
+
+1. FIFO - cache evicts the first block of data accessed first without any other considerations.
+2. LIFO - cache evicts the block accessed most recently without any other considerations.
+3. LRU - cache evicts the least recently used items first
+4. MRU - cache evicts the most recently used items first
+5. LFU - cache evicts the least frequently used items first
+6. RR - cache randomly evicts an item
+
+#### Data Partioning
+
+Data Partioning - split a database / table into many machines to improve Manageability, performance and availability. We need a load balancer here.
+
+In Horizontal Partioning, the data is split based on a range of values, like all records with even ids in one table and odd ids in another. The split should be chosen carefully as the tables can be unevenly balanced. This is also called Data Sharding.
+
+In Vertical Partioning, the data is split into different servers. Like storing user information in one database in one server, posts in another server etc. This is easier to implement and has low impact on the system. Depending on the size, the data within each server has to be split horizontally.
+
+In Directory based Partioning, we have a directory server that abstract the partioning schema away from the database and queries data based on a key-value kind of logic. 
+
+Partioning Criteria: 
+1. Hash-based: a hash function is applied to the key attributes of data which yields a partition number. This approach is not flexible with the number of db servers changing.
+2. List: each partition is assigned a list of values.
+3. Round robin: store data in partition `i mod n`, ith record and n partitions.
+4. Composite: combination of any of the above
+
+Problems:
+
+a. joins on tables when data and databases are split, yield bad performance . A workaround is to denormalize the data but this would mean redundancy and inconsistency.
+b. Enforcing referencial integrity constraints could be hard. This would mean extra effort to clean or correct data.
+c. There might be an effort to rebalance data on different servers, which means create more db servers or split huge tables across databases again.
+
+#### Indexes
+
+Indexes in databases.
