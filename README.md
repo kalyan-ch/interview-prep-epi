@@ -14,15 +14,14 @@ Preparation for interviews - 1 month course from elements of programming intervi
 7. clear the lowermost set bit - `num & (num -1)`
 8. find `x % (power of 2)` : x & (twoPow - 1)
 
-### Arrays and Strings
-#### Arrays
+### Arrays
 1. Simple brute force solutions in arrays involve additional space complexity of O(n). To use the array itself would be subtler and use O(1) space.
 2. Filling an array from front is slow, so should see if it is possible to do this from the back.
 3. instead of deleting an entry consider overwriting it since deletion involves shifting all the other elements.
 4. Be comfortable dealing with sub-arrays - use different indexes for indicating start or end of each sub-arrays
 5. Don't worry about the integrity of the array until it is time return it.
 
-#### Strings
+### Strings
 6. Strings are immutable but character arrays and `StringBuilder` aren't.
 7. To check if a string is a palindrome just compare the first and last character of the string until you reach the middle
 8. Use Stringbuilder to construct Strings instead of appending characters to a String.
@@ -45,34 +44,11 @@ Preparation for interviews - 1 month course from elements of programming intervi
 
 #### Key characteristics of distributed systems
 
-##### Scalability 
-
-Scalability is the capability of a system to grow and manage increased demand - increased data volume, increased amount of work etc., without losing any performance.
-
-Horizontal scaling is scaling by adding more machines to the existing pool. It is easier to scale dynamically this way than vertically. MongoDb and Cassandra use horizontal scaling
-
-Vertical scaling is scaling by adding more power (RAM, Processor etc.) to the existing pool of machines. This type of scaling is limited by individual machine capacity. Good example is MySQL.
-
-##### Reliability
-
-Reliability is the probability a system might fail in a given period. A distribute system is reliable if it continues to deliver the services even if one of more software or hardware components fail. Achieving this might lead to redundancy. 
-
-##### Availability
-
-Availability is the time a system remains operational to perform its function in a given period. Usually measured in percentages. 
-
-Reliability vs Availability - if a system is reliable it is available. However, if it is available, it is not necessarily reliable. 
-
-
-##### Efficiency
-
-Efficiency is the performance of a given service or system. 
-
-##### Manageability or Servicability
-
-This is the simplicity with which a system can be repaired or manitained. If this process is too complex or time taking, the availability of the system decreases. 
-
-Ease of diagnosing, ease of making updates and ease of operation also factor into defining the Manageability of a system. 
+1. Scalability - Scalability is the capability of a system to grow and manage increased demand - increased data volume, increased amount of work etc., without losing any performance. Horizontal scaling is scaling by adding more machines to the existing pool. It is easier to scale dynamically this way than vertically. MongoDb and Cassandra use horizontal scaling. Vertical scaling is scaling by adding more power (RAM, Processor etc.) to the existing pool of machines. This type of scaling is limited by individual machine capacity. Good example is MySQL.
+2. Reliability - Reliability is the probability a system might fail in a given period. A distribute system is reliable if it continues to deliver the services even if one of more software or hardware components fail. Achieving this might lead to redundancy. 
+3. Availability - Availability is the time a system remains operational to perform its function in a given period. Usually measured in percentages. Reliability vs Availability - if a system is reliable it is available. However, if it is available, it is not necessarily reliable. 
+4. Efficiency - Efficiency is the performance of a given service or system. 
+5. Manageability or Servicability - This is the simplicity with which a system can be repaired or manitained. If this process is too complex or time taking, the availability of the system decreases. Ease of diagnosing, ease of making updates and ease of operation also factor into defining the Manageability of a system. 
 
 
 #### Load Balancing
