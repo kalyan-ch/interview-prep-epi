@@ -76,4 +76,31 @@ c. There might be an effort to rebalance data on different servers, which means 
 
 ## Indexes
 
-Indexes in databases.
+Indexes are used in database tables to hasten up search queries. Indexes should only be used in tables if the tables are used more heavily for reading than for writing. Indexes increase the time taken to write to a table.
+
+## SQL vs NoSQL
+
+In SQL databases, the data is stored in a structured fashion like, according to the principles of RDBMS. In NoSQL databases, data is stored in the form of documents, key-value pairs or graphs etc. which don't follow a definite structure. 
+
+SQL databases are schema-based (all data types and relationships should be determined beforehand), use some form of Structured Query Language (SQL) and are vertically scalable more easily than are horizontally scalable. NoSQL databases have dynamic schemas, use Unstructured query languages which differ with database and are easily horizantally scalable. 
+
+Since SQL databases are generally `ACID (Atomicity, Consistency, Isolation, Durability)` compliant, they are better in terms of safe transactions and data reliability. Since NoSQL databases are easily scalable and easier for development, they are better when an MVP needs to be pushed out fast.
+
+## CAP Theorem
+
+CAP Theorem states that it is impossible to achieve all of Consistency, Availability and Partition Tolerance in a single system.
+
+## Consistent Hashing
+Consistent Hashing
+
+## Long-Polling vs WebSockets vs Server-sent Events
+events
+
+
+
+
+
+
+
+
+
