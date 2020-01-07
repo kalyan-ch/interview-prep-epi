@@ -40,4 +40,16 @@ Preparation for interviews - 1 month course from elements of programming intervi
 2. Consider left and right skewed trees for complexity analysis
 3. If a parent node exists we can use it to reduce time and space complexity
  
+### System Design
+
+#### Steps to solve a system design interview question
+
+1. Requirement Clarification
+2. Back-Of-The-Envelope Estimate
+3. System Interface Definition
+4. Defining Data Model
+5. High-level design
+6. Low-level design
+7. Identify Bottlenecks and resolve
+
 
