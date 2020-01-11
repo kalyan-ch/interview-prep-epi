@@ -33,7 +33,9 @@ Preparation for interviews - 1 month course from elements of programming intervi
 
 ### Stacks and Queues
 1. FIFO is ideal when order needs to be preserved
-2. LIFO is ideal when parsing is involved
+1. ArrayDeque for stacks - `addFirst(e), peekFirst(), removeFirst() - push(e), peek() and pop()`
+1. LIFO is ideal when parsing is involved
+1. ArrayDeque for Queues - `addLast(e), peekFirst(), removeFirst() - push(e), peek() and pop()`
 
 ### Binary Trees
 1. Recursive algorithms are well suited for problems on trees. Therefore, the space complexity might increase because of the function call stack

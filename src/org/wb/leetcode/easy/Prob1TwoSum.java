@@ -1,4 +1,4 @@
-package org.wb.leetcode;
+package org.wb.leetcode.easy;
 
 import org.wb.epi.Chap5Arrays.ArraysUtils;
 

@@ -1,4 +1,4 @@
-package org.wb.leetcode;
+package org.wb.leetcode.easy;
 
 public class Prob2StringToInt {
 
