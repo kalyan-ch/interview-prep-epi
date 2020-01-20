@@ -54,4 +54,25 @@ Preparation for interviews - 1 month course from elements of programming intervi
 6. Low-level design
 7. Identify Bottlenecks and resolve
 
+### Behavioral Questions
 
+1. Why do you want to work for X company?
+1. Why do you want to leave your current/last company?
+1. What are you looking for in your next role?
+1. Tell me about a time when you had a conflict with a co-worker.
+1. Tell me about a time in which you had a conflict and needed to influence somebody else.
+1. What project are you currently working on?
+1. What is the most challenging aspect of your current project?
+1. What was the most difficult bug that you fixed in the past 6 months?
+1. How do you tackle challenges? Name a difficult challenge you faced while working on a project, how you overcame it, and what you learned.
+1. What are you excited about?
+1. What frustrates you?
+1. Imagine it is your first day here at the company. What do you want to work on? What features would you improve on?
+1. What are the most interesting projects you have worked on and how might they be relevant to this company's environment?
+1. Tell me about a time you had a disagreement with your manager.
+1. Talk about a project you are most passionate about, or one where you did your best work.
+1. What does your best day of work look like?
+1. What is something that you had to push for in your previous projects?
+1. What is the most constructive feedback you have received in your career?
+1. What is something you had to persevere at for multiple months?
+1. Tell me about a time you met a tight deadline.
