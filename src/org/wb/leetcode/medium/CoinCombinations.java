@@ -4,7 +4,7 @@ public class CoinCombinations {
 
     public static void main(String[] args) {
         int[] coins = {2, 3, 7};
-        System.out.println(coinChange(coins, 12));
+        System.out.println(coinChange(coins, 30));
     }
 
     private static int coinChange(int[] coins, int amount) {
