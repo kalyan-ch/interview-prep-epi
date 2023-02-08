@@ -15,12 +15,15 @@ public class FiveFIveDeleteDupsSortedArr {
         deleteDupsFromSortedArr(arr3);
         deleteKeyFromArr(arr2, 2);
         printIntArray(arr);
+        printIntArray(arr3);
         printIntArray(arr4);
     }
 
     private static void deleteDupsFromSortedArr(int[] arr) {
         int i = 0, j = 0;
-        // j is an end-index for sub-array that contains unique elements
+        // sub-array [0,j] contains only unique elements
+        // therefore whenever arr[i] and arr[j] are not equal
+        // j is moved to right and value is overwritten with arr[i]
         while( i < arr.length){
             if(arr[i] != arr[j]){
                 arr[++j] = arr[i];
