@@ -24,7 +24,7 @@ Preparation for interviews - 1 month course from elements of programming intervi
 ### Strings
 6. Strings are immutable but character arrays and `StringBuilder` aren't.
 7. To check if a string is a palindrome just compare the first and last character of the string until you reach the middle
-8. Use Stringbuilder to construct Strings instead of appending characters to a String.
+8. Use Stringbuilder to construct Strings instead of appending characters to a String. O(n) vs O(n^2)
 
 ### Linked Lists
 1. Similar to arrays, linked list problems also have trivial solutions involving O(n) space.
