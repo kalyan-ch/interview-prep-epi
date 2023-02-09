@@ -1,8 +1,8 @@
-package org.wb.leetcode;
+package org.wb.leetcode.medium;
 
 import java.util.*;
 
-public class LongestNonDuplicateChars {
+public class Prob3LongestNonDuplicateChars {
 
     public static void main(String[] args) {
         String[] ss = {"au", "abcabcbb", "pwwkes"};
@@ -20,11 +20,14 @@ public class LongestNonDuplicateChars {
             charMap.put(c, right);
 
             if(dupIdx != -1 && dupIdx >= left){
-                result = Math.max(result, right-left);
                 left = ++dupIdx;
             }
 
+            result = Math.max(result, right - left + 1);
+
             right++;
         }
+
+        return result;
     }
 }
