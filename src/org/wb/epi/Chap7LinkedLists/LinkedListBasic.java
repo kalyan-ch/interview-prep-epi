@@ -2,12 +2,15 @@ package org.wb.epi.Chap7LinkedLists;
 
 public class LinkedListBasic<T> {
 
-    public void insertNewNode(T data, ListNode<T> head){
+    public ListNode<T> insertNewNode(T data, ListNode<T> head){
         ListNode<T> node = head;
         while(node.next != null){
             node = node.next;
         }
-        node.next = new ListNode<T>(data);
+        ListNode<T> newNode= new ListNode<T>(data);
+        node.next = newNode;
+
+        return newNode;
     }
 
     public void deleteNextNode(ListNode<T> node){
@@ -17,7 +20,6 @@ public class LinkedListBasic<T> {
     public void printLinkedList(ListNode<T> head){
         ListNode<T> node = head;
         while(node != null){
-
             if(node.next != null)
                 System.out.print(node.data+" -> ");
             else

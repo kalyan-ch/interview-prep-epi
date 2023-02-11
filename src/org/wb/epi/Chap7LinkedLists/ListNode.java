@@ -1,8 +1,8 @@
 package org.wb.epi.Chap7LinkedLists;
 
 public class ListNode<T> {
-    T data;
-    ListNode<T> next;
+    public T data;
+    public ListNode<T> next;
 
     public ListNode(T data){
         this.data = data;
@@ -13,4 +13,8 @@ public class ListNode<T> {
 
     }
 
+    @Override
+    public String toString() {
+        return "data= " + data;
+    }
 }
