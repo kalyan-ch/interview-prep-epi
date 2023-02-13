@@ -15,7 +15,9 @@ public class SevenTwoReverseASingleSublist {
         linkedListBasic.printLinkedList(head);*/
 
         linkedListBasic.printLinkedList(head);
-        ListNode<Integer> newHead = reverseLinkedList(head);
+        ListNode<Integer> newHead = reverseLinkedList2(head);
+        linkedListBasic.printLinkedList(newHead);
+        reverseSubList(newHead, 2, 6);
         linkedListBasic.printLinkedList(newHead);
 
     }
@@ -24,19 +26,20 @@ public class SevenTwoReverseASingleSublist {
         ListNode<Integer> dummyHead = new ListNode<>(0);
         dummyHead.next = head;
         int i = 1;
+        // get the node just before start
         while(i++ < start){
             dummyHead = dummyHead.next;
         }
 
-        ListNode<Integer> lIter = dummyHead.next;
+        ListNode<Integer> curr = dummyHead.next;
 
-        System.out.println(dummyHead.data+" "+lIter.data);
-
+        // throughout the loop curr is going to remain the same
+        // all the change are the links between temp and  dummyHead
         while(start++ < finish){
-            ListNode<Integer> temp = lIter.next;
-            lIter.next = temp.next;
-            temp.next = dummyHead.next;
-            dummyHead.next = temp;
+            ListNode<Integer> temp = curr.next; // save next node in temp
+            curr.next = temp.next; // link curr to temp's next node
+            temp.next = dummyHead.next; // link temp's next to curr's predecessor node
+            dummyHead.next = temp; // make temp as start of reversed list
         }
 
     }
@@ -64,5 +67,19 @@ public class SevenTwoReverseASingleSublist {
         }
 
         return dummyHead.next;
+    }
+
+    private static ListNode<Integer> reverseLinkedList2(ListNode<Integer> head){
+        ListNode<Integer> prev = null; // this is the next location for the first node
+        ListNode<Integer> curr = head; // current pointer iterating through each node
+
+        while(curr != null){
+            ListNode<Integer> nextNode = curr.next; // save the next node in a temp pointer
+            curr.next = prev; // sever the link to next node and point it to previous node
+            prev = curr; // move previous to next
+            curr = nextNode; // move curr to next
+        }
+
+        return prev;
     }
 }

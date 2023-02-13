@@ -13,7 +13,6 @@ public class Problem2 {
 
         while(b < number){
             int fib = a + b;
-            System.out.println(fib);
             if((fib & 1) == 0)
                 sum += fib;
 
