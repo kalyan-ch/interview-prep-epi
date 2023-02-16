@@ -34,6 +34,13 @@ public class ArraysUtils {
         System.out.println();
     }
 
+    public static void printInt2dList(List<List<Integer>> array){
+        for(List<Integer> a: array){
+            printIntList(a);
+        }
+        System.out.println();
+    }
+
     public static void printStrList(List<String> array){
         for(String a: array){
             System.out.print(a+" ");

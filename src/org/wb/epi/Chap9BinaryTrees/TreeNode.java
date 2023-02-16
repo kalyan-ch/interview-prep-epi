@@ -5,6 +5,10 @@ public class TreeNode {
     public Integer data;
     public TreeNode right;
 
+    public TreeNode(Integer data){
+        this.data = data;
+    }
+
     public TreeNode(Integer data, TreeNode left, TreeNode right){
         this.data = data;
         this.left = left;
