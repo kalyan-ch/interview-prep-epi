@@ -18,6 +18,15 @@ public class ArraysUtils {
         System.out.println();
     }
 
+    public static void print2dCharArray(char[][] array){
+        for(char[] arr: array){
+            for(char a: arr)
+                System.out.print(a+" ");
+
+            System.out.println();
+        }
+    }
+
     public static void print2dArray(int[][] array){
         for(int[] arr: array){
             for(int a: arr)
