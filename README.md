@@ -1,5 +1,7 @@
 # interview-prep-epi
-Preparation for interviews - 1 month course from elements of programming interviews
+Preparation for interviews 
+- 1 month course from elements of programming interviews
+- Notable [Leetcode](https://leetcode.com/problemset/all/) problems in key concepts
 
 ## Trips and Tricks
 
