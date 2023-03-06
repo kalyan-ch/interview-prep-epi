@@ -43,7 +43,20 @@ Preparation for interviews
 1. Recursive algorithms are well suited for problems on trees. Therefore, the space complexity might increase because of the function call stack
 2. Consider left and right skewed trees for complexity analysis
 3. If a parent node exists we can use it to reduce time and space complexity
+
+### Dynamic Programming
+
+#### Framework for solving DP problems
  
+Usually when a problem asks for maximum or minimum of anything and when choices need to be made at each step and when the current answer depends on answer in previous state, the problem can be solved using dynamic programming. 
+
+DP problems can be solved in three main components:
+
+1. Some data structure to store memoized results - usually an array that contains the state of current element. The next state is usually a sum, product or in some way related to current and/or previous states.
+1. Recurrence relation - a way to transition between one state to the next. 
+1. Base case - the absolute base case where we know the answer if only one element or one condition is considered.
+
+
 ### System Design
 
 #### Steps to solve a system design interview question
