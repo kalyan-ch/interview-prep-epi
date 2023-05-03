@@ -57,9 +57,16 @@ DP problems can be solved in three main components:
 1. Base case - the absolute base case where we know the answer if only one element or one condition is considered.
 
 
-### System Design
+## System Design
 
-#### Steps to solve a system design interview question
+### Links
+
+1. [System Design Primer](https://github.com/donnemartin/system-design-primer)
+2. [Problems](https://github.com/donnemartin/system-design-primer#system-design-interview-questions-with-solutions)
+3. [Scalability lecture - Harvard](https://www.youtube.com/watch?v=-W9F__D3oY4)
+4. [Scalability for dummies](https://web.archive.org/web/20220530193911/https://www.lecloud.net/post/7295452622/scalability-for-dummies-part-1-clones)
+
+### Steps to solve a system design interview question
 
 1. Requirement Clarification
 2. Back-Of-The-Envelope Estimate
@@ -68,6 +75,19 @@ DP problems can be solved in three main components:
 5. High-level design
 6. Low-level design
 7. Identify Bottlenecks and resolve
+
+### Common Object-Oriented Design Patterns
+1. Template - defines a structure for sub-classes in which steps of an algo and their order are defined. Example - inheritance in java, interfaces, sub-classes etc.
+2. Strategy - this is similar to template pattern but the algorithm is chosen at run time rather than at compile time. Example - different compression algos selected based on the type of compression  
+3. Observer - in this pattern the observer objects subscribe to an observable object to be notified everytime there's any change in data. Two variants - __Push__ where the observable class pushes information to the observers and __Pull__ where the observers may pull the information from observable class. Push design puts control in observable class by making it the final controller of the information and the frequency of updates. Pull design puts control in observer classes by giving them the ability to customize aspects of information updates.   
+4. Singleton - ensures that only one instance of the object exists throughout the session. Example - Loggers
+5. Abstract Factory - provides an interface for creating families of related objects without having to specify the concrete classes. Example - interfaces in java
+6. Factory method - defines an interface for creating an object but lets subclasses decide which class to instantiate.
+7. Builder - enables specification of fields that are needed for object creation. Makes code readable. Example - when an object needs to be created with different fields set in different circumstances
+8. Prototype - uses a clone method to duplicate existing objects to be used as protoypes for new instances. Example - creating similar objects especially when creating new objects in expensive. 
+9. Adapter - allows interface of an existing class to be used from another instance. Example - when dealing with third party library code we often need to convert data from the type defined in our code to the type that works with the library code.
+10. Flyweight - allows objects to be shared to reduce memory load. Example - object pools
+11. Proxy - allows an object to act like a proxy - a lightweight version of the object and can be used in times of memory crunch. Example - like using a proxy image instead of real image for its metadata
 
 ### Behavioral Questions
 
