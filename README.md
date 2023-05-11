@@ -59,6 +59,8 @@ DP problems can be solved in three main components:
 
 ## System Design
 
+Software Interviews have design problems in them and below is a compilation of threads.
+
 ### Links
 
 1. [System Design Primer](https://github.com/donnemartin/system-design-primer)
@@ -75,6 +77,11 @@ DP problems can be solved in three main components:
 5. High-level design
 6. Low-level design
 7. Identify Bottlenecks and resolve
+
+### Design Problems and Solutions
+
+1. [Twitter Timeline problem](system-design/twitter-timeline.md)
+2. [Mint.com Website](system-design/mint-website.md)
 
 ### Common Object-Oriented Design Patterns
 1. Template - defines a structure for sub-classes in which steps of an algo and their order are defined. Example - inheritance in java, interfaces, sub-classes etc.
