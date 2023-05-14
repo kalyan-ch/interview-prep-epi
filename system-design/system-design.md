@@ -96,7 +96,13 @@ Consistent Hashing
 ## Long-Polling vs WebSockets vs Server-sent Events
 events
 
+## System Design problems outline
 
+1. __Outline use cases and constraints__ - clarify use cases and requirements with the interviewer. List functional and non-functional requirements. get back-of-the-envelope estimates for storage and network usage.
+2. __Create a high-level design__ - create a high level design that shows interactions between critical components
+3. __Design core components__ - design what each core component should do
+4. __Identify bottlenecks__ - identify potential problems with the design, any component that couldn't handle traffic or the amount of data during normal or peak hours of operation.
+5. __Scale the design__ - solve these bottlenecks by identifying the solutions (e.g. horizontally scaling servers, adding replica dbs etc.)
 
 
 
