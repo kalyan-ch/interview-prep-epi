@@ -43,7 +43,7 @@ Design a website that tracks user expenses and creates budgets
 
 A High Level Design
 
-[mint design](https://i.imgur.com/FbuvR4O.jpg)
+![mint design](https://i.imgur.com/FbuvR4O.jpg)
 
 ## Design Core components
 
