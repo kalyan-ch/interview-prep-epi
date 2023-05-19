@@ -116,7 +116,7 @@ Biggest challenges in System Design interviews: knowing where to start and knowi
 
 1. DNS - Domain name System is a fundamental component of internet infrastructure. It translates user-friendly domain names into IP addresses. Your computer sends a query to a recursive resolver which then searches a series of DNS servers followed by a Top-Level Domain server and ultimately the authoritative DNS server. Once the IP is located, the resolver returns it to the computer and allows it to browse to the website.
 2. Load Balancer - see section above
-3. API Gateway - this servers as a server that functions as an intermediary between external clients and internal microservices or API-based backend servers. API gateway routes incoming requests, manages authentication and authorization, limits and throttles the traffic depending on need, caches responses to avoid load on back end and reduce latency and transforms requests and responses.
+3. API Gateway - this serves as a server that functions as an intermediary between external clients and internal microservices or API-based backend servers. API gateway routes incoming requests, manages authentication and authorization, limits and throttles the traffic depending on need, caches responses to avoid load on back end and reduce latency and transforms requests and responses.
 4. CDN - a content delivery network is a distributed network of servers that store and delivery static and dynamic content to client machines that are geographically closer to it. See above section for more details
 5. Proxy Servers - see section above
 6. Caching - see section above
