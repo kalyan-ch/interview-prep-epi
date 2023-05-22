@@ -82,6 +82,12 @@ A proxy server is an intermediate piece of software or hardware that sits betwee
 
 So, when you want to protect your clients on your internal network, you should put them behind a forward proxy; on the other hand, when you want to protect your servers, you should put them behind a reverse proxy.
 
+## Redundancy and Replication
+
+Redundancy is having more than one copy of critical components of the system. This typically increases reliability or performance of the system. This is one of the popular ways to eliminate single points of failure.  
+
+Database replication is process of copying and synchronizing data from one database to another. This increases availability, fault tolerance and scalability. Most of DBMS systems have a primary-replica relationship between different data servers. The updates to primary db get written to replica dbs as well. Popular replication strategies - synchronous - where primary db is replicated to the replicas before the write is considered complete, asynchronous - where db replication happens to the replicas at a later time. This kind of replication can have performance benefits. Semi-synchronous replication combines strategies from the above two. 
+
 ## SQL vs NoSQL
 
 In SQL databases, the data is stored in a structured fashion like, according to the principles of RDBMS. In NoSQL databases, data is stored in the form of documents, key-value pairs or graphs etc. which don't follow a definite structure. 
@@ -92,7 +98,13 @@ Since SQL databases are generally `ACID (Atomicity, Consistency, Isolation, Dura
 
 ## CAP Theorem
 
-CAP Theorem states that it is impossible to achieve all of Consistency, Availability and Partition Tolerance in a single system.
+CAP Theorem states that it is impossible to achieve all three of  Consistency, Availability and Partition Tolerance in a single system.
+
+1. Consistency - all nodes see the same data at the same time. users can write / read to any node in the system and see no inconsistencies in data.
+2. Availability - all requests received by nodes must result in a response. Even when severe network failures occur, every request must terminate. Availability is the system's ability to remain accessible even if one or more nodes fail.
+3. Partition Tolerance - a partition is a communication break between any two nodes in the system i.e. both nodes are up but can't communicate with each other. Partition-Tolerance means system continues to operate even if there are some partitions in the system. Such a system can sustain network failures as long as the entire network doesn't fail.
+
+According to CAP theorem, any distributed system can only achieve two of the above properties - CA, AP, CP. CA is not a coherent option, as a system that is not partition-tolerant will be forced to fail on C or A properties. Therefore, a system must choose between Consistency and Availability.
 
 ## Consistent Hashing
 Consistent Hashing
