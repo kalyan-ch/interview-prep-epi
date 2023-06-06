@@ -91,7 +91,7 @@ Software Interviews have design problems in them and below is a compilation of t
 5. Abstract Factory - provides an interface for creating families of related objects without having to specify the concrete classes. Example - interfaces in java
 6. Factory method - defines an interface for creating an object but lets subclasses decide which class to instantiate.
 7. Builder - enables specification of fields that are needed for object creation. Makes code readable. Example - when an object needs to be created with different fields set in different circumstances
-8. Prototype - uses a clone method to duplicate existing objects to be used as protoypes for new instances. Example - creating similar objects especially when creating new objects in expensive. 
+8. Prototype - uses a clone method to duplicate existing objects to be used as prototypes for new instances. Example - creating similar objects especially when creating new objects in expensive. 
 9. Adapter - allows interface of an existing class to be used from another instance. Example - when dealing with third party library code we often need to convert data from the type defined in our code to the type that works with the library code.
 10. Flyweight - allows objects to be shared to reduce memory load. Example - object pools
 11. Proxy - allows an object to act like a proxy - a lightweight version of the object and can be used in times of memory crunch. Example - like using a proxy image instead of real image for its metadata

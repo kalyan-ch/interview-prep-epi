@@ -145,4 +145,8 @@ Biggest challenges in System Design interviews: knowing where to start and knowi
 17. Heartbeat - heartbeat services check the health of a machine and this helps in load balancing, repair and maintenance of the system. Usually server machines continually send heartbeat messages to a central monitoring service.
 18. Checksum - checksum is used to validate the integrity of data. this is important with a lot of data moving between numerous components over a large network. Algorithms - MD4, SHA-1, SHA-256, SHA-512 etc.
 
+## Requirement clarification questions
 
+It is better to clarify requirements than to jump in and solve the design.
+
+![requirement-clarification-questions](https://i.imgur.com/4wBxnGh.png)
