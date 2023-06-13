@@ -38,20 +38,9 @@ These APIs will be used in the system.
    2. helps gauge quality of reviews
    3. updates the review record in the record table with increment / decrement to the current value
 3. get_avg_rating(itemIdList);
-   1. gets the average rating of a list of item
-   2. this needs to be called when - user visits app home when app displays popular dishes in the area or when the user visits store home page
-   3. input list changes based on where the user is
-   4. since this is the heaviest service by call volume, the data for the service needs to reside in cache
 4. get_reviews_for_item(itemId);
-   1. this service gets top 5 most helpful reviews for a food item when the item is clicked
-   2. sends the list of reviews to the UI system to display it 
-   3. this needs to be fast - low latency
-   4. can utilize cache to quickly get the reviews for relevant items for the user
 5. calculate_average_rating(itemId);
-   1. this service calculates average rating of an item based on all reviews
-   2. gets all reviews for an itemId, performs calculation and persists to average rating table
-   3. this service can run within the DB itself in terms of a store procedure or can run as a batch process 
-
+   
 ## High Level Design
 
 ![item-review-system-hld](https://i.imgur.com/XFsJGqX.jpeg)
@@ -59,3 +48,33 @@ These APIs will be used in the system.
 ## Core Component design
 
 The functionality of `write_service` and `rate_review` is straightforward - write data to DB directly. since the data need not be consistent, slow writes are fine. Since we will incorporate data redundancy, eventual consistency is achieved.
+
+### get_reviews
+* gets a list of reviews for an item
+* is called when a user clicks on an item
+* since this is one of high traffic operations, service doesn't have to retrieve data from DB and can get from cache
+* cache contains reviews of food items of stores that are nearest to customers / popular stores in the area
+
+### get_avg_rating
+* retrieves the average rating of a list of food items
+* this service can be called when user visits the store page or when user is viewing the popular dishes in the area
+* since this is one of the high traffic operations, service uses cache for fast retrievals
+* cache contains average rating of items that are popular in the area or that of items in the popular / nearby stores in the area.
+
+### calculate_avg_rating
+* periodically calculates average rating of every food item
+* will process all data in chunks for efficient performance
+* this can be a stored procedure living in the db that gets executed periodically
+* updates table `AverageRating` with rating for food item
+
+### Data Replication and Partition
+
+Data needs to be replicated within the DB to avoid any single point of failure. DB can be designed into a master-slave architecture for data replication with asynchronous operations to update slave DBs with latest data.
+
+Since review data is huge, it can be partitioned into multiple shards. They can be sharded based on location since we want to retrieve data based on user's location. For this purpose, we can persist location data along with review data. A typical shard contains data for a city, if it isn't too big. If it is, we can further partition based on zip code / county etc.  
+
+## Scaling the design
+
+We need to add load balancing in front of servers containing read services to evenly distribute traffic. Load balancer between client and `get_reviews` and another one between client and `get_avg_rating`. 
+
+As already discussed, cache can be used to reduce latency in data read operation. Cache can contain reviews of all food items of all popular stores. Also, we can club the average rating information along with popular items information that already resides in the cache. LRU cache eviction can be used to get rid of stale data.
