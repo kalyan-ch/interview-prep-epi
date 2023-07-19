@@ -57,6 +57,13 @@ public class ArraysUtils {
         System.out.println();
     }
 
+    public static void printStrArr(String[] array){
+        for(String a: array){
+            System.out.print(a+" ");
+        }
+        System.out.println();
+    }
+
     public static void swap(int[] arr, int i, int j){
         int temp = arr[i] ;
         arr[i] = arr[j];
