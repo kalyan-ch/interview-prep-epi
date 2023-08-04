@@ -1,20 +1,16 @@
 package org.wb;
 
-import org.wb.epi.Chap5Arrays.ArraysUtils;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Main {
 
     public static void main(String[] args) {
-        List<String> strings = new ArrayList<>();
-        strings.add("1");
-        strings.add("2");
+        System.out.println(Integer.MAX_VALUE);
+        int[] arr = {1, 2, 3};
 
-        Set<Integer> set = strings.stream().map(s -> Integer.parseInt(s)).collect(Collectors.toSet());
-
+        Set<Integer> arrSet =Arrays.stream(arr).boxed().collect(Collectors.toSet());
+        Integer[] arr2 = arrSet.toArray(new Integer[arrSet.size()]);
     }
 }
