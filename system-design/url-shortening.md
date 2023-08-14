@@ -36,6 +36,10 @@ Design a URL shortening service
 user => id, loginDetails, trivial_cols
 url => hash_value, url, expiry, userId
 
+## High level design
+
+![url-shortening-system](https://i.imgur.com/30Mxexz.png)
+
 ## Database partitioning
 
 We can partition database based on many criteria. Since our data is mainly stored based on hash, we can partition them based on starting letters of the hash. We can also partition based on user's geographic location etc. 
