@@ -13,4 +13,15 @@ public class ListNode {
                 "val=" + val +
                 '}';
     }
+
+    public void printList() {
+        ListNode node = this;
+
+        while(node != null) {
+            System.out.print(node.val+" -> ");
+            node = node.next;
+        }
+
+        System.out.println();
+    }
 }
