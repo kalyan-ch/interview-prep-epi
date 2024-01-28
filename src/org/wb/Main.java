@@ -7,10 +7,8 @@ import java.util.stream.Collectors;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(Integer.MAX_VALUE);
-        int[] arr = {1, 2, 3};
-
-        Set<Integer> arrSet =Arrays.stream(arr).boxed().collect(Collectors.toSet());
-        Integer[] arr2 = arrSet.toArray(new Integer[arrSet.size()]);
+        double a = Math.log10(5000);
+        System.out.println((a % 1));
+        System.out.println(Math.log10(1000));
     }
 }
