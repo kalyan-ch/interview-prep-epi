@@ -14,35 +14,15 @@ public class HIndex {
     private static int hIndex(int[] citations) {
         Arrays.sort(citations);
 
-        int result = 0, low = 1, high = citations.length;
+        int n = citations.length, i = 0, j = n - 1;
 
-        while(low <= high){
-            int i = (low + high) / 2;
-            if (areThereHPapers(i, citations)){
-                result = i;
-                low = i + 1;
-            } else {
-                high = i - 1;
-            }
+        while(i < n && citations[j] > i) {
+            i++;
+            j--;
         }
 
-        return result;
+        return i;
     }
 
-    private static boolean areThereHPapers(int num, int[] citations) {
-        int firstCeil = -1, low = 0, high = citations.length - 1;
 
-        while (low <= high) {
-            int mid = (low + high) / 2;
-
-            if (citations[mid] >= num) {
-                firstCeil = mid;
-                high = mid - 1;
-            } else {
-                low = mid + 1;
-            }
-        }
-
-        return (firstCeil != -1) && (citations.length - firstCeil) >= num;
-    }
 }
