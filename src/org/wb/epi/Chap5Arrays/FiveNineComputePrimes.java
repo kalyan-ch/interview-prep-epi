@@ -5,9 +5,11 @@ import java.util.Collections;
 import java.util.List;
 public class FiveNineComputePrimes {
     public static void main(String[] args) {
-        for(int i = 0;  i < 1000; i += 50){
+        for(int i = 0;  i <= 100000; i += 500){
             printAllPrimesBefore(i);
         }
+
+
 
     }
 
@@ -25,13 +27,13 @@ public class FiveNineComputePrimes {
                 for (int j = i*2; j < n; j += i)
                     isPrime.set(j, false);
 
-                System.out.print(i+" ");
+                //System.out.print(i+" ");
             }
 
         }
 
         System.out.println();
-        System.out.println(isPrime.stream().filter(s -> s).count());
+        System.out.println("primes before "+ n +" "+isPrime.stream().filter(s -> s).count());
 
     }
 }

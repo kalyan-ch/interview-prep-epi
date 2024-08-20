@@ -57,6 +57,13 @@ public class ArraysUtils {
         System.out.println();
     }
 
+    public static void printStr2dList(List<List<String>> array){
+
+        for(List<String> s: array) {
+            printStrList(s);
+        }
+    }
+
     public static void printStrArr(String[] array){
         for(String a: array){
             System.out.print(a+" ");

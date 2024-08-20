@@ -11,8 +11,8 @@ public class FiveTwoIncrementArray {
     public static void main(String[] args) {
         List<Integer> number1 = new ArrayList<>();
         number1.add(9);
-        number1.add(7);
-        number1.add(4);
+        number1.add(5);
+        number1.add(8);
 
         List<Integer> number2 = Arrays.asList(9,9,2,5);
 
@@ -45,7 +45,7 @@ public class FiveTwoIncrementArray {
 
         List<Integer> result = new ArrayList<>();
         int n = num1.size(), m = num2.size();
-        int p = n > m ? n+1 : m+1;
+        int p = Math.max(m, n) + 1;
         for (int i = 0; i < p; i++){
             result.add(0);
         }

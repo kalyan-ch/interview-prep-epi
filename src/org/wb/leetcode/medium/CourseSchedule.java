@@ -38,7 +38,7 @@ public class CourseSchedule {
             Node fromC = createOrGetNode(graph, edge[1]);
             Node toC = createOrGetNode(graph, edge[0]);
 
-            // from course has dependency on tocourse
+            // from course has dependency on to course
             // so add an edge
             fromC.nodes.add(edge[0]);
             toC.inDegree++;
@@ -46,7 +46,7 @@ public class CourseSchedule {
 
         Queue<Integer> noDepCs = new LinkedList<>();
 
-        // get all nodes with 0 indegree
+        // get all nodes with 0 in-degree
         for(int c: graph.keySet()){
             if(graph.get(c).inDegree == 0){
                 noDepCs.add(c);
@@ -56,7 +56,7 @@ public class CourseSchedule {
         int removedEdges = 0;
         // start traversing the graph with nodes with 0 incoming edges
         // remove all the edges (increment the edges seen)
-        while(noDepCs.size() > 0){
+        while(!noDepCs.isEmpty()){
             int c = noDepCs.poll();
 
             for(int nc: graph.get(c).nodes){

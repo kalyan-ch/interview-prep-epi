@@ -11,10 +11,11 @@ public class FiveFIveDeleteDupsSortedArr {
         int[] arr2 = {2, 3, 5, 5, 7, 11, 11, 11, 13};
         int[] arr3 = {2, 2, 3, 3, 5};
         int[] arr4 = {2, 4, 3, 2, 1};
-        deleteDupsFromSortedArr(arr);
-        deleteDupsFromSortedArr(arr3);
+        //deleteDupsFromSortedArr(arr);
+        deleteDupsFromSortedArr(arr2);
         deleteKeyFromArr(arr2, 2);
         printIntArray(arr);
+        printIntArray(arr2);
         printIntArray(arr3);
         printIntArray(arr4);
     }
@@ -23,7 +24,7 @@ public class FiveFIveDeleteDupsSortedArr {
         int i = 0, j = 0;
         // sub-array [0,j] contains only unique elements
         // therefore whenever arr[i] and arr[j] are not equal
-        // j is moved to right and value is overwritten with arr[i]
+        // j is moved to next value and that value is overwritten with arr[i]
         while( i < arr.length){
             if(arr[i] != arr[j]){
                 arr[++j] = arr[i];
