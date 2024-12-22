@@ -69,7 +69,7 @@ public class SevenTwoReverseASingleSublist {
         return dummyHead.next;
     }
 
-    private static ListNode<Integer> reverseLinkedList2(ListNode<Integer> head){
+    public static ListNode<Integer> reverseLinkedList2(ListNode<Integer> head){
         ListNode<Integer> prev = null; // this is the next location for the first node
         ListNode<Integer> curr = head; // current pointer iterating through each node
 
