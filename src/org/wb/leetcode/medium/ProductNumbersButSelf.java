@@ -3,7 +3,7 @@ package org.wb.leetcode.medium;
 public class ProductNumbersButSelf {
 
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5};
+        int[] arr = {3, 4, -2, 1, 5, 6};
         int[] res = productExceptSelf(arr);
         for(int i: res)
             System.out.print(i+", ");
