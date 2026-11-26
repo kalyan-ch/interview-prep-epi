@@ -1,6 +1,5 @@
 package org.wb.neetcodeOneFifty.SlidingWindow;
 
-import java.util.HashMap;
 
 public class PermutationSubstring {
     public static void main(String[] args) {
@@ -27,14 +26,13 @@ public class PermutationSubstring {
         }
 
         int l = 0;
-        for (int r = s1.length() - 1; r < s2.length(); r++) {
+        for (int r = s1.length(); r < s2.length(); r++) {
             if(matches == 26) {
                 return true;
             }
 
             var idx = s2.charAt(r) - 'a';
             charCount2[idx]++;
-
             if(charCount[idx] == charCount2[idx]) {
                 matches++;
             } else if (charCount[idx] + 1 == charCount2[idx]) {
@@ -43,7 +41,6 @@ public class PermutationSubstring {
 
             var idx2 = s2.charAt(l) - 'a';
             charCount2[idx2]--;
-
             if(charCount[idx2] == charCount2[idx2]) {
                 matches++;
             } else if (charCount[idx2] - 1 == charCount2[idx2]) {
@@ -52,7 +49,7 @@ public class PermutationSubstring {
             l++;
         }
 
-        return false;
+        return matches == 26;
     }
 
 }
